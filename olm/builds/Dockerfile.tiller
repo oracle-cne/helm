@@ -1,0 +1,18 @@
+FROM oraclelinux:7-slim
+
+ARG PRODUCT
+ARG VERSION
+ARG RELEASE
+ARG PLATFORM
+
+COPY rpms /tmp/
+
+RUN yum update -y &&\
+ yum-config-manager --enable ol7_addons &&\
+ yum install -y /tmp/${PRODUCT}-${VERSION}-${RELEASE}.${PLATFORM}.rpm &&\
+ rm -rfv /var/cache/yum /tmp/* /LICENSES &&\
+ ln -s /usr/share/licenses /LICENSES
+
+EXPOSE 44134
+
+ENTRYPOINT ["/usr/bin/tiller"]
