@@ -1,0 +1,10 @@
+@Library('olcne-pipeline') _
+import com.oracle.olcne.pipeline.BranchPattern
+import com.oracle.olcne.pipeline.Container
+
+olcnePipeline(
+  branchPattern: new BranchPattern(master: 'oracle/release/{{{.major}}}.{{{.minor}}}.{{{.patch}}}', feature: 'feature/.*'),
+  useDockerfiles: true,
+  yumRepos: ['ol7_addons', 'ol7_developer_golang113'],
+  containers: [('container-registry.oracle.com/olcne/helm:v{{{.major}}}.{{{.minor}}}.{{{.patch}}}'): 'olcne/helm:v{{{.major}}}.{{{.minor}}}.{{{.patch}}}']
+)
