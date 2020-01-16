@@ -83,7 +83,7 @@ install -p -m 755 -t %{buildroot}%{_bindir} bin/rudder
 %endif
 popd
 mv src/k8s.io/helm/LICENSE .
-
+mv src/k8s.io/helm/THIRD_PARTY_LICENSES.txt .
 
 %files
 %license LICENSE THIRD_PARTY_LICENSES.txt
