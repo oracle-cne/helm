@@ -20,7 +20,7 @@ Group:          System/Management
 Url:            https://github.com/kubernetes/helm
 Vendor:         Oracle America
 Source:         helm-%{version}.tar.bz2
-BuildRequires:  golang >= 1.11.0
+BuildRequires:  golang >= 1.13.15
 BuildRequires:	glide
 BuildRequires:	mercurial
 Requires:	ca-certificates
@@ -103,5 +103,5 @@ mv src/k8s.io/helm/THIRD_PARTY_LICENSES.txt .
 %endif
 
 %changelog
-* {{{.changelog_timestamp}}} - %{version}-%{oracle_release_version}
+* {{{.changelog_timestamp}}} - {{{$version}}}-1.0.1
 - Added Oracle Specific Build Files for helm
