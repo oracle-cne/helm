@@ -3,5 +3,5 @@ TagFormat: v(?P<major>[0-9])\.(?P<minor>[0-9]+)\.(?P<patch>[0-9]+)
 Comparator: 0
 BranchTemplate: feature/${major}.${minor}.${patch}
 MasterBranchTemplate: oracle/release/${major}.${minor}.${patch}
-TemplateDirectory: ${major}.${minor}.templates
+TemplateDirectory: "v${major}.${minor}"
 SemverTagFilter: "> 3.1.1"
