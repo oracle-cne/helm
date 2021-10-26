@@ -14,14 +14,14 @@ Name:           %{app_name}
 Version:        %{app_version}
 Release:        %{oracle_release_version}%{?dist}
 BuildArch:      x86_64
-Summary:        The package manager for Kubernetes 
+Summary:        The package manager for Kubernetes
 License:        Apache-2.0
 Group:          System/Management
 Url:            https://github.com/kubernetes/helm
 Vendor:         Oracle America
 Source:         helm-%{version}.tar.bz2
-BuildRequires:  golang >= 1.13.15
-Requires:	ca-certificates
+BuildRequires:  golang >= 1.16
+Requires:	    ca-certificates
 
 %description
 The package manager for Kubernetes. Helm helps you manage Kubernetes applications — Helm Charts helps you define, install, and upgrade even the most complex Kubernetes application.
