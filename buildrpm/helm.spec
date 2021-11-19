@@ -5,6 +5,8 @@
 %else
 %global debug_package   %{nil}
 %endif
+%global golang_version 1.16
+%global _buildhost build-ol%{?oraclelinux}-%{?_arch}.oracle.com
 
 %global app_name helm
 %global app_version {{{$version}}}
@@ -20,7 +22,7 @@ Group:          System/Management
 Url:            https://github.com/kubernetes/helm
 Vendor:         Oracle America
 Source:         helm-%{version}.tar.bz2
-BuildRequires:  golang >= 1.16
+BuildRequires:  golang >= %{golang_version}
 Requires:	    ca-certificates
 
 %description
