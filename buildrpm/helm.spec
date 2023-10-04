@@ -15,7 +15,6 @@
 Name:           %{app_name}
 Version:        %{app_version}
 Release:        %{oracle_release_version}%{?dist}
-BuildArch:      x86_64
 Summary:        The package manager for Kubernetes
 License:        Apache-2.0
 Group:          System/Management
