@@ -5,7 +5,7 @@
 %else
 %global debug_package   %{nil}
 %endif
-%global golang_version 1.20.10
+%global golang_version 1.20.12
 %global _buildhost build-ol%{?oraclelinux}-%{?_arch}.oracle.com
 
 %global app_name helm
