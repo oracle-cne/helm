@@ -8,8 +8,7 @@ olcnePipeline(
   architectures: ['x86_64', 'aarch64'],
   yumOL7Repos: ['ol7_addons', 'ol7_developer_golang117'],
   yumOL8Repos:['ol8_appstream'],
-  ol8ModulesToDisable: ['go-toolset:ol8'],
-  ol8ModulesToEnable: ['go-toolset:ol8addon'],
+  ol8ModulesToDisable: ['go-toolset:ol8', 'go-toolset:ol8addon'],
   yumOL9Repos:['ol9_appstream'],
   golang: '1.22.8'
 )
