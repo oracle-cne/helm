@@ -37,7 +37,7 @@ mv $(ls | grep -v "^src$") src/k8s.io/helm
 export GOPATH=$(pwd)
 pushd src/k8s.io/helm
 go version
-make GIT_TAG=v%{app_version} GIT_DIRTY=clean
+make GIT_TAG=v%{app_version} GIT_DIRTY=clean GOFLAGS="-trimpath=false" VERSION="v%{app_version}" VERSION_METADATA="v%{app_version}" EXT_LDFLAGS="-X main.version=v%{app_version}"
 popd
 
 %install
