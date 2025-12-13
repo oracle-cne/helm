@@ -1,0 +1,13 @@
+@Library('olcne-pipeline') _
+import com.oracle.olcne.pipeline.BranchPattern
+
+olcnePipeline(
+  branchPattern: new BranchPattern(master: 'oracle/release/4.0.4', feature: '(?!^release/.*$)(^.*$)'),
+  customStages: [container: [enabled: false]],
+  platforms: ['ol8', 'ol9'],
+  architectures: ['x86_64', 'aarch64'],
+  yumOL8Repos:['ol8_appstream'],
+  ol8ModulesToDisable: ['go-toolset:ol8', 'go-toolset:ol8addon'],
+  yumOL9Repos:['ol9_appstream'],
+  golang: '1.23.5'
+)
