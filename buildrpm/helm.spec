@@ -10,7 +10,7 @@
 
 %global app_name helm
 %global app_version 4.3.1
-%global oracle_release_version 1
+%global oracle_release_version 2
 
 Name:           %{app_name}
 Version:        %{app_version}
@@ -53,5 +53,8 @@ mv src/k8s.io/helm/THIRD_PARTY_LICENSES.txt .
 %{_bindir}/helm
 
 %changelog
+* Wed Oct 28 2026 Oracle Cloud Native Environment Authors <noreply@oracle.com> - 4.3.1-2
+- Add Oracle Linux 10 support
+
 * Fri Oct 16 2026 Oracle Cloud Native Environment Authors <noreply@oracle.com> - 4.3.1-1
 - Added Oracle Specific build Files
